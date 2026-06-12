@@ -1,0 +1,30 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch DOOM assets (tolerate network failure)
+        run: node scripts/fetch-doom.mjs || true
+
+      - name: Fetch GBA emulator + homebrew test demos (tolerate network failure)
+        run: node scripts/fetch-gba.mjs || true
+
+      - name: Run core test suite
+        run: node test/run.mjs
+
+      - name: Run graphics protocol tests
+        run: node test/gfx.test.mjs

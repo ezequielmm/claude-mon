@@ -1,0 +1,9 @@
+{
+  "name": "claude-mon",
+  "version": "1.0.0",
+  "description": "Play Game Boy Advance games — fullscreen behind your Claude Code session, or let Claude play them by reading the screen. Bring your own legally-dumped ROM.",
+  "author": { "name": "Ezequiel Mora Martinez" },
+  "license": "MIT",
+  "homepage": "https://github.com/ezequielmm/claude-mon",
+  "repository": "https://github.com/ezequielmm/claude-mon"
+}

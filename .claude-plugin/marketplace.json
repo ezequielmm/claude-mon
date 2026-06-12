@@ -1,0 +1,12 @@
+{
+  "name": "claude-mon-marketplace",
+  "description": "Game Boy Advance, behind Claude Code — bring your own ROM",
+  "owner": { "name": "Ezequiel Mora Martinez" },
+  "plugins": [
+    {
+      "name": "claude-mon",
+      "source": "./",
+      "description": "GBA games fullscreen behind your Claude Code session; Claude can play them by reading the screen. BYO legally-dumped ROM."
+    }
+  ]
+}
